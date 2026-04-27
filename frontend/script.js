@@ -97,7 +97,7 @@
 
     try {
       /* ── replace URL with your Lambda Function URL or API Gateway endpoint ── */
-      const LAMBDA_ENDPOINT = 'https://mguo2ryocg.execute-api.ap-south-1.amazonaws.com/contact';
+      const LAMBDA_ENDPOINT = 'https://4fgxlozcf1.execute-api.ap-south-1.amazonaws.com/contacts';
 
       const res = await fetch(LAMBDA_ENDPOINT, {
         method:  'POST',
