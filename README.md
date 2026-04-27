@@ -39,18 +39,6 @@ User → S3 → API Gateway → Lambda → DynamoDB
 
 ---
 
-## 📁 Project Structure
-serverless-contact-form/
-│
-├── frontend/
-│   ├── index.html
-│
-├── backend/
-│   ├── lambda_function.py
-│   ├── requirements.txt
-│
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-│
-├── README.md
+## 📁 Project Architecture
+<img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/cf6906b0-a9ca-43d9-8dd2-3dcb644e2bb0" />
+
