@@ -19,7 +19,7 @@ jobs:
       with:
         args: --delete
       env:
-        AWS_S3_BUCKET: your-bucket-name
+        AWS_S3_BUCKET: contact-form-s3-lambda
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
         AWS_REGION: ap-south-1
