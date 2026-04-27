@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Contact Us</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="style.css" />
+      <script defer src="script.js"></script>
+   </head>
+   <body>
+      <div class="page" id="page">
+         <!-- ── success overlay ── -->
+         <div class="success-overlay" id="successOverlay">
+            <div class="success-icon">
+               <svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"/>
+               </svg>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>We'll get back to you within 24 hours.</p>
+            <div class="success-id" id="ticketId">Ticket #000000</div>
+            <button onclick="resetForm()" style="margin-top:8px;background:none;border:1px solid var(--border);color:var(--muted);padding:10px 24px;border-radius:100px;cursor:pointer;font-family:inherit;font-size:13px;transition:all 0.2s;">Send another</button>
+         </div>
+         <!-- ── left ── -->
+         <div class="left">
+            <div class="brand">
+               <div class="badge"><span class="badge-dot"></span>We're available</div>
+               <h1>Let's<br><span>Connect</span></h1>
+               <p>Have a question, project, or just want to say hello? Drop us a message and we'll respond shortly.</p>
+            </div>
+            <div class="contact-info">
+               <div class="info-item">
+                  <div class="info-icon">
+                     <svg viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                     </svg>
+                  </div>
+                  <div>
+                     <div style="color:var(--text);font-weight:500;font-size:13px;">hello@yourcompany.com</div>
+                     <div style="font-size:11px;margin-top:2px;">Email us anytime</div>
+                  </div>
+               </div>
+               <div class="info-item">
+                  <div class="info-icon">
+                     <svg viewBox="0 0 24 24">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.36 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.22 6.22l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                     </svg>
+                  </div>
+                  <div>
+                     <div style="color:var(--text);font-weight:500;font-size:13px;">+1 (800) 000-0000</div>
+                     <div style="font-size:11px;margin-top:2px;">Mon–Fri, 9am–6pm EST</div>
+                  </div>
+               </div>
+               <div class="info-item">
+                  <div class="info-icon">
+                     <svg viewBox="0 0 24 24">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                     </svg>
+                  </div>
+                  <div>
+                     <div style="color:var(--text);font-weight:500;font-size:13px;">123 Innovation Way</div>
+                     <div style="font-size:11px;margin-top:2px;">San Francisco, CA 94107</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- ── right / form ── -->
+         <div class="right">
+            <div class="form-header">
+               <h2>Send a Message</h2>
+               <p>Fields marked <span style="color:var(--accent)">*</span> are required.</p>
+            </div>
+            <form id="contactForm" novalidate>
+               <!-- Name row -->
+               <div class="row">
+                  <div class="field" id="field-fname">
+                     <label>First Name <span class="req">*</span></label>
+                     <div class="input-wrap">
+                        <svg viewBox="0 0 24 24">
+                           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                           <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <input type="text" id="fname" placeholder="Jane" autocomplete="given-name" />
+                     </div>
+                     <span class="err-msg">Please enter your first name.</span>
+                  </div>
+                  <div class="field" id="field-lname">
+                     <label>Last Name <span class="req">*</span></label>
+                     <div class="input-wrap">
+                        <svg viewBox="0 0 24 24">
+                           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                           <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <input type="text" id="lname" placeholder="Doe" autocomplete="family-name" />
+                     </div>
+                     <span class="err-msg">Please enter your last name.</span>
+                  </div>
+               </div>
+               <!-- Email -->
+               <div class="field" id="field-email">
+                  <label>Email Address <span class="req">*</span></label>
+                  <div class="input-wrap">
+                     <svg viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                     </svg>
+                     <input type="email" id="email" placeholder="jane@example.com" autocomplete="email" />
+                  </div>
+                  <span class="err-msg">Please enter a valid email address.</span>
+               </div>
+               <!-- Phone -->
+               <div class="field" id="field-phone">
+                  <label>Phone Number</label>
+                  <div class="phone-row">
+                     <div class="input-wrap phone-prefix">
+                        <svg viewBox="0 0 24 24">
+                           <circle cx="12" cy="12" r="10"/>
+                           <line x1="2" y1="12" x2="22" y2="12"/>
+                           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <select id="phone-code" style="padding-left:42px;">
+                           <option value="+1">🇺🇸 +1</option>
+                           <option value="+44">🇬🇧 +44</option>
+                           <option value="+91">🇮🇳 +91</option>
+                           <option value="+61">🇦🇺 +61</option>
+                           <option value="+49">🇩🇪 +49</option>
+                           <option value="+33">🇫🇷 +33</option>
+                           <option value="+81">🇯🇵 +81</option>
+                           <option value="+86">🇨🇳 +86</option>
+                           <option value="+55">🇧🇷 +55</option>
+                           <option value="+971">🇦🇪 +971</option>
+                        </select>
+                     </div>
+                     <div class="input-wrap phone-num">
+                        <svg viewBox="0 0 24 24">
+                           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.36 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.22 6.22l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <input type="tel" id="phone" placeholder="(555) 000-0000" autocomplete="tel" />
+                     </div>
+                  </div>
+               </div>
+               <!-- Company + Role -->
+               <div class="row">
+                  <div class="field">
+                     <label>Company</label>
+                     <div class="input-wrap">
+                        <svg viewBox="0 0 24 24">
+                           <rect x="2" y="7" width="20" height="14" rx="2"/>
+                           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                        <input type="text" id="company" placeholder="Acme Corp" autocomplete="organization" />
+                     </div>
+                  </div>
+                  <div class="field" id="field-role">
+                     <label>Your Role</label>
+                     <div class="input-wrap">
+                        <svg viewBox="0 0 24 24">
+                           <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                        <select id="role">
+                           <option value="">Select role…</option>
+                           <option>Founder / CEO</option>
+                           <option>Product Manager</option>
+                           <option>Developer / Engineer</option>
+                           <option>Designer</option>
+                           <option>Marketing</option>
+                           <option>Sales</option>
+                           <option>Other</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+               <!-- Inquiry type -->
+               <div class="field">
+                  <label>Inquiry Type <span class="req">*</span></label>
+                  <div class="check-group" id="inquiry-group">
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="inquiry" value="General"><span class="check-dot"></span>General</label>
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="inquiry" value="Sales"><span class="check-dot"></span>Sales</label>
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="inquiry" value="Support"><span class="check-dot"></span>Support</label>
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="inquiry" value="Partnership"><span class="check-dot"></span>Partnership</label>
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="inquiry" value="Press"><span class="check-dot"></span>Press</label>
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="inquiry" value="Other"><span class="check-dot"></span>Other</label>
+                  </div>
+                  <span class="err-msg" id="inquiry-err" style="display:none">Please select an inquiry type.</span>
+               </div>
+               <!-- Priority -->
+               <div class="field">
+                  <label>Priority</label>
+                  <div class="check-group" id="priority-group">
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="priority" value="Low"><span class="check-dot"></span>🟢 Low</label>
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="priority" value="Medium"><span class="check-dot"></span>🟡 Medium</label>
+                     <label class="check-item" onclick="toggleCheck(this)"><input type="radio" name="priority" value="High"><span class="check-dot"></span>🔴 High</label>
+                  </div>
+               </div>
+               <!-- Subject -->
+               <div class="field" id="field-subject">
+                  <label>Subject <span class="req">*</span></label>
+                  <div class="input-wrap">
+                     <svg viewBox="0 0 24 24">
+                        <line x1="8" y1="6" x2="21" y2="6"/>
+                        <line x1="8" y1="12" x2="21" y2="12"/>
+                        <line x1="8" y1="18" x2="21" y2="18"/>
+                        <line x1="3" y1="6" x2="3.01" y2="6"/>
+                        <line x1="3" y1="12" x2="3.01" y2="12"/>
+                        <line x1="3" y1="18" x2="3.01" y2="18"/>
+                     </svg>
+                     <input type="text" id="subject" placeholder="How can we help?" />
+                  </div>
+                  <span class="err-msg">Please enter a subject.</span>
+               </div>
+               <!-- Message -->
+               <div class="field" id="field-message">
+                  <label>Message <span class="req">*</span></label>
+                  <textarea id="message" placeholder="Tell us more about your inquiry…" rows="4"></textarea>
+                  <div style="text-align:right;font-size:11px;color:var(--muted);margin-top:4px;"><span id="char-count">0</span> / 2000</div>
+                  <span class="err-msg">Please enter a message (at least 10 characters).</span>
+               </div>
+               <!-- Preferred contact -->
+               <div class="field">
+                  <label>Preferred Contact Method</label>
+                  <div class="input-wrap">
+                     <svg viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                     </svg>
+                     <select id="contact-method">
+                        <option value="">No preference</option>
+                        <option>Email</option>
+                        <option>Phone</option>
+                        <option>Video Call</option>
+                     </select>
+                  </div>
+               </div>
+               <!-- How did you hear -->
+               <div class="field">
+                  <label>How did you hear about us?</label>
+                  <div class="input-wrap">
+                     <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                     </svg>
+                     <select id="source">
+                        <option value="">Select source…</option>
+                        <option>Google Search</option>
+                        <option>Social Media</option>
+                        <option>Referral</option>
+                        <option>Conference / Event</option>
+                        <option>Blog / Article</option>
+                        <option>Other</option>
+                     </select>
+                  </div>
+               </div>
+               <!-- Attachment -->
+               <div class="field">
+                  <label>Attachment</label>
+                  <label class="file-label" for="attachment">
+                     <svg viewBox="0 0 24 24">
+                        <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                     </svg>
+                     <span>Attach a file</span>
+                     <span id="file-name">PDF, DOCX, PNG up to 10MB</span>
+                  </label>
+                  <input type="file" id="attachment" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" onchange="showFileName(this)" />
+               </div>
+               <!-- Rating -->
+               <div class="field">
+                  <label>Rate your experience so far</label>
+                  <div class="stars" id="stars">
+                     <input type="radio" id="s5" name="rating" value="5"><label for="s5" title="5 stars">★</label>
+                     <input type="radio" id="s4" name="rating" value="4"><label for="s4" title="4 stars">★</label>
+                     <input type="radio" id="s3" name="rating" value="3"><label for="s3" title="3 stars">★</label>
+                     <input type="radio" id="s2" name="rating" value="2"><label for="s2" title="2 stars">★</label>
+                     <input type="radio" id="s1" name="rating" value="1"><label for="s1" title="1 star">★</label>
+                  </div>
+               </div>
+               <!-- Consent -->
+               <div class="consent" style="margin-bottom:20px;">
+                  <div class="consent-box" id="consent-box" onclick="toggleConsent()">
+                     <svg viewBox="0 0 12 12">
+                        <polyline points="2 6 5 9 10 3"/>
+                     </svg>
+                  </div>
+                  <span>I agree to the <a href="#">Privacy Policy</a> and consent to being contacted regarding my inquiry. <span style="color:var(--accent)">*</span></span>
+               </div>
+               <span class="err-msg" id="consent-err" style="display:none;margin-bottom:16px;">You must accept the privacy policy.</span>
+               <!-- Submit -->
+               <button type="submit" class="submit-btn" id="submitBtn">
+                  <div class="btn-text">
+                     <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                     </svg>
+                     Send Message
+                  </div>
+                  <div class="btn-spinner">
+                     <div class="spinner-ring"></div>
+                     Sending…
+                  </div>
+               </button>
+            </form>
+         </div>
+      </div>
+      </body>
+</html>
